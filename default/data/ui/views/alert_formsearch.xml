@@ -16,7 +16,7 @@
     <param name="actionsMenuFilter">dashboard</param>
   </module>
   <module name="HiddenSearch" layoutPanel="viewHeader">
-    <param name="search">index="nagios" (nagiosevent="SERVICE ALERT" state="HARD" status="WARNING" OR status="CRITICAL") OR (nagiosevent="HOST ALERT" hoststate="HARD" hoststatus="DOWN") src_host="$nagiosdevice$" | fields + src_host, name, severity, reason</param>
+    <param name="search">`DeviceTopServiceNotifications( $nagiosdevice$ )`</param>
     <module name="SearchSelectLister">
       <param name="staticFieldsToDisplay">
         <list>
