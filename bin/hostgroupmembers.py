@@ -11,7 +11,7 @@ sys.path.append( s4n.redispath )
 import redis
 
 #FOO = "GET hostgroups\nColumns: name members_with_state\nSeparators: 10 10 44 124"
-FOO = "GET hostgroups\nColumns: name members_with_state\nOutputFormat: json\n"
+FOO = "GET hostgroups\nColumns: name members_with_state\nOutputFormat: python\n"
 
 def netcat(hostname, port, content):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -19,7 +19,7 @@ def netcat(hostname, port, content):
     s.sendall(content)
     s.shutdown(socket.SHUT_WR)
     while 1:
-        data = s.recv(2048)
+        data = s.recv(4096)
         if data == "":
             break
         return data

@@ -16,10 +16,21 @@ export = none
 owner = admin
 export = none
 
-[props/nagios/EXTRACT-attempt]
-access = read : [ * ], write : [ admin ]
+[indexes/storage]
+version = 4.2.3
 owner = admin
+
+[macros/notificationreport%281%29]
+access = read : [ * ], write : [ admin, power ]
 export = none
+owner = admin
+version = 5.0.1
+modtime = 1354135857.488413000
+
+[props/nagios/EXTRACT-attempt]
+export = none
+owner = admin
+access = read : [ * ], write : [ admin ]
 
 [props/nagios/EXTRACT-downtimehoststatus]
 owner = admin
@@ -34,14 +45,14 @@ owner = admin
 export = none
 
 [props/nagios/EXTRACT-externalcommand]
-access = read : [ * ], write : [ admin ]
-owner = admin
 export = none
+owner = admin
+access = read : [ * ], write : [ admin ]
 
 [props/nagios/EXTRACT-hostalert]
-access = read : [ * ], write : [ admin ]
-owner = admin
 export = none
+owner = admin
+access = read : [ * ], write : [ admin ]
 
 [props/nagios/EXTRACT-hostattempt]
 owner = admin
@@ -68,9 +79,9 @@ owner = admin
 export = none
 
 [props/nagios/EXTRACT-hostexternal]
-access = read : [ * ], write : [ admin ]
-owner = admin
 export = none
+owner = admin
+access = read : [ * ], write : [ admin ]
 
 [props/nagios/EXTRACT-hostinfo]
 owner = admin
@@ -89,9 +100,9 @@ owner = admin
 export = none
 
 [props/nagios/EXTRACT-hostpassive]
-access = read : [ * ], write : [ admin ]
-owner = admin
 export = none
+owner = admin
+access = read : [ * ], write : [ admin ]
 
 [props/nagios/EXTRACT-hostservicestate]
 owner = admin
@@ -126,27 +137,27 @@ owner = admin
 export = none
 
 [props/nagios/EXTRACT-servicealertname]
-access = read : [ * ], write : [ admin ]
-owner = admin
 export = none
+owner = admin
+access = read : [ * ], write : [ admin ]
 
 [props/nagios/EXTRACT-serviceattempt]
 owner = admin
 export = none
 
 [props/nagios/EXTRACT-serviceexternal]
-access = read : [ * ], write : [ admin ]
-owner = admin
 export = none
+owner = admin
+access = read : [ * ], write : [ admin ]
 
 [props/nagios/EXTRACT-servicenamenotification]
 owner = admin
 export = none
 
 [props/nagios/EXTRACT-servicepassivename]
-access = read : [ * ], write : [ admin ]
-owner = admin
 export = none
+owner = admin
+access = read : [ * ], write : [ admin ]
 
 [props/nagios/EXTRACT-servicestate]
 owner = admin
@@ -165,38 +176,38 @@ owner = admin
 export = none
 
 [props/nagios/EXTRACT-state]
-access = read : [ * ], write : [ admin ]
-owner = admin
 export = none
+owner = admin
+access = read : [ * ], write : [ admin ]
 
 [props/nagios/EXTRACT-status]
-access = read : [ * ], write : [ admin ]
-owner = admin
 export = none
+owner = admin
+access = read : [ * ], write : [ admin ]
 
 [props/nagios/EXTRACT-statusexternal]
-access = read : [ * ], write : [ admin ]
-owner = admin
 export = none
+owner = admin
+access = read : [ * ], write : [ admin ]
 
 [props/nagios/EXTRACT-statusinfo]
-access = read : [ * ], write : [ admin ]
-owner = admin
 export = none
+owner = admin
+access = read : [ * ], write : [ admin ]
 
 [props/nagios/EXTRACT-statusinfoexternal]
-access = read : [ * ], write : [ admin ]
-owner = admin
 export = none
+owner = admin
+access = read : [ * ], write : [ admin ]
 
 [props/nagios/EXTRACT-statusnotification]
 owner = admin
 export = none
 
 [props/nagios/EXTRACT-username]
-access = read : [ * ], write : [ admin ]
-owner = admin
 export = none
+owner = admin
+access = read : [ * ], write : [ admin ]
 
 [props/nagioshostperf/EXTRACT-hostname]
 owner = admin
@@ -291,8 +302,8 @@ owner = nobody
 export = none
 
 [savedsearches/Isilon%20-%20Storage%20Usage%20-%20Last%204%20hours]
-owner = admin
 version = 4.2
+owner = admin
 
 [savedsearches/nagios%20-%20Host%20Down%20Notifications%20-%20Last%2060%20minutes]
 owner = admin
@@ -319,13 +330,21 @@ owner = admin
 export = none
 
 [savedsearches/nagios%20-%20Warning%20Alert]
-access = read : [ * ], write : [ admin ]
-owner = admin
 export = none
+owner = admin
+access = read : [ * ], write : [ admin ]
+
+[savedsearches/nagios%20-%20lookup%20all%20devices%20-%20CMDB]
+version = 4.2.3
+owner = admin
+
+[savedsearches/nagios%20-%20service%20alerts%20by%20servicegroup%20-%20Last%2024%20hours]
+version = 4.2.3
+owner = admin
 
 [views/.svn]
-owner = admin
 version = 4.2.1
+owner = admin
 
 [views/NagiosPerf]
 owner = admin
@@ -336,230 +355,279 @@ owner = admin
 export = none
 
 [viewstates/%2A%3Aga9e3z0f]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/%2A%3Aga9e4ihy]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/%2A%3Agap2j2nr]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/%2A%3Agap2kbaq]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/%2A%3Agap2pmzc]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/%2A%3Agaykx8un]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/%2A%3Agaymv7k6]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/%2A%3Agayrzwa5]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/%2A%3Agaytkivf]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/%2A%3Agayumlb1]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/%2A%3Agaz2l4kh]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/%2A%3Agdfm7rss]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/%2A%3Age2c5x64]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/%2A%3Age2c7fpw]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/%2A%3Age2c9ea2]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/%2A%3Age2cb6k8]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/%2A%3Age2ccmk2]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/%2A%3Age2cdzzb]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/%2A%3Age2cf2cy]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/%2A%3Age2ep2ob]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/%2A%3Agmoroff0]
-access = read : [ * ]
-owner = nobody
 version = 4.2
 export = system
+owner = nobody
+access = read : [ * ]
 
 [viewstates/%2A%3Agn8tgvpw]
-access = read : [ * ]
-owner = nobody
 version = 4.2.1
 export = system
+owner = nobody
+access = read : [ * ]
 
 [viewstates/flashtimeline%3Aga99f3yx]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/flashtimeline%3Aga9abh7j]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/flashtimeline%3Agagpv1xz]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/flashtimeline%3Agagpwole]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/flashtimeline%3Aganpkw80]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/flashtimeline%3Aganpm14y]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/flashtimeline%3Agaoswcsg]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/flashtimeline%3Agaosyloz]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/flashtimeline%3Agaqhpz8p]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/flashtimeline%3Agaz1vim9]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/flashtimeline%3Agaz26pu8]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/flashtimeline%3Agaz28rlj]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/flashtimeline%3Agaz2b3br]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/flashtimeline%3Agaz2gtvi]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/flashtimeline%3Agaz2t17n]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/flashtimeline%3Agaz2w7we]
-access = read : [ * ]
-owner = admin
 export = system
+owner = admin
+access = read : [ * ]
 
 [viewstates/flashtimeline%3Agaz3kjaf]
-access = read : [ * ]
-owner = admin
 export = system
-
-[indexes/storage]
 owner = admin
-version = 4.2.3
+access = read : [ * ]
 
 [viewstates/flashtimeline%3Agsreoyds]
-access = read : [ * ]
+version = 4.2.3
 export = system
 owner = nobody
-version = 4.2.3
-
-[savedsearches/nagios%20-%20lookup%20all%20devices%20-%20CMDB]
-owner = admin
-version = 4.2.3
+access = read : [ * ]
 
 [viewstates/flashtimeline%3Agsrf98rb]
-access = read : [ * ]
+version = 4.2.3
 export = system
 owner = nobody
-version = 4.2.3
+access = read : [ * ]
 
-[savedsearches/nagios%20-%20service%20alerts%20by%20servicegroup%20-%20Last%2024%20hours]
-owner = admin
-version = 4.2.3
+[nav/default]
+version = 5.0.1
+modtime = 1354126834.241228000
 
-[macros/notificationreport%281%29]
-access = read : [ * ], write : [ admin ]
+[views/NagiosNetbotPerformanceGraphs]
+access = read : [ * ], write : [ admin, power ]
 export = none
 owner = admin
-version = 5.0
-modtime = 1352481075.947065000
+version = 5.0.1
+modtime = 1354128355.615733000
+
+[macros/DeviceTopServiceNotifications%281%29]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = admin
+version = 5.0.1
+modtime = 1354135872.331138000
+
+[macros/DeviceWarningandCriticalAlerts%281%29]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = admin
+version = 5.0.1
+modtime = 1354137052.836938000
+
+[macros/CreateDeviceLookupByType%281%29]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = admin
+version = 5.0.1
+modtime = 1354142955.787339000
+
+[viewstates/flashtimeline%3Aha32fqmh]
+export = system
+owner = nobody
+version = 5.0.1
+modtime = 1354144105.388703000
+
+[savedsearches/nagios%20-%20Create%20Server%20list%20based%20on%20Hostgroup]
+owner = admin
+version = 5.0.1
+modtime = 1354326436.561400000
+
+[viewstates/flashtimeline%3Aha32jlo2]
+export = system
+owner = nobody
+version = 5.0.1
+modtime = 1354144285.558925000
+
+[savedsearches/nagios%20-%20Create%20Cisco%20list%20based%20on%20Hostgroup]
+owner = admin
+version = 5.0.1
+modtime = 1354326406.863129000
+
+[savedsearches/nagios%20-%20Create%20List%20of%20all%20devices]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = admin
+version = 5.0.1
+modtime = 1354326548.815472000
+
+[macros/HostAlert]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = admin
+version = 5.0.1
+modtime = 1354326826.172720000
 
