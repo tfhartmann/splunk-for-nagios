@@ -38,7 +38,7 @@
               <param name="charting.chart.orientation">x</param>
               <param name="charting.chart.style">shiny</param>
               <param name="charting.chart.usePercentageValue">true</param>
-              <param name="charting.gaugeColors">[0xBF3030,0xFFE800,0x84E900]</param>
+              <param name="charting.gaugeColors">[0xFF6600,0xFF0000,0xFFFF00,0x00FF00]</param>
               <module name="JSChart">
                 <param name="width">100%</param>
                 <module name="Gimp"/>
@@ -80,7 +80,7 @@
               <param name="charting.chart.orientation">x</param>
               <param name="charting.chart.style">shiny</param>
               <param name="charting.chart.usePercentageValue">true</param>
-              <param name="charting.gaugeColors">[0xBF3030,0xFFE800,0x84E900]</param>
+              <param name="charting.gaugeColors">[0xFF6600,0xFF0000,0xFFFF00,0x00FF00]</param>
               <module name="JSChart">
                 <param name="width">100%</param>
                 <module name="Gimp"/>
