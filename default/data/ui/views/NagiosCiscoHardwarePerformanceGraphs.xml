@@ -74,7 +74,7 @@
             <module name="GenericHeader" layoutPanel="panel_row1_col1">
               <param name="label">Warning and Critical Alerts</param>
   <module name="HiddenSearch">
-        <param name="search">`DeviceTopServiceNotifications( $nagiosdevice$ )`</param>
+        <param name="search">`DeviceWarningandCriticalAlerts( $nagiosdevice$ )`</param>
         <param name="groupLabel">Warning and Critical Alerts</param>
         <module name="ViewstateAdapter">
       <module name="HiddenFieldPicker">

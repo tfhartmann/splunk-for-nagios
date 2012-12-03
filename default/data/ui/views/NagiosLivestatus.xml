@@ -244,9 +244,10 @@
   <module name="HiddenSearch" layoutPanel="panel_row4_col1" group="Host Alerts" autoRun="True">
     <module name="TimeRangePicker">
       <param name="searchWhenChanged">True</param>
-      <param name="selected">30 minute window</param>
+      <param name="selected">Last 30 minutes</param>
       <module name="HiddenSearch" autoRun="True">
-        <param name="search">index="nagios" ((nagiosevent="CURRENT SERVICE STATE" servicestate="HARD") NOT servicestatus="OK") OR ((nagiosevent="SERVICE ALERT" state="HARD") NOT status="OK") | liveservicestate | search NOT liveservicestate=0 | dedup src_host,name | table src_host, name, liveservicestate, severity, reason</param>
+        <!-- <param name="search">index="nagios" ((nagiosevent="CURRENT SERVICE STATE" servicestate="HARD") NOT servicestatus="OK") OR ((nagiosevent="SERVICE ALERT" state="HARD") NOT status="OK") | liveservicestate | search NOT liveservicestate=0 | dedup src_host,name | table src_host, name, liveservicestate, severity, reason</param> -->
+        <param name="search">`HostAlert` | lookup local=true nagios-hosts name AS src_host OUTPUT address AS src_ip, alias AS desc, hard_state | table src_host, src_ip, desc, hard_state | search NOT hard_state=0 | stats dc(src_host) as count by src_host, hard_state</param>
       <module name="HiddenFieldPicker">
         <param name="strictMode">True</param>
         <module name="JobProgressIndicator">
