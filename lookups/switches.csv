@@ -1131,7 +1131,7 @@ st8gw1,2
 "story8-4-server-sw1",2
 "story8-4-sw.fas",2
 "story8-5-sw.fas",2
-"story8-b-sw.fas",2
+"story8-b-sw1",2
 "story8-b-sw3",2
 "story8-mdf-sw1",2
 "story8-mdf-sw3",2
@@ -1227,6 +1227,7 @@ sungardsw1,2
 "vanserg-1-sw.fas",2
 "wadsworth-b-sw1",2
 "wadsworth-b-sw2",2
+"wadsworth-b-sw3",2
 "walker103-b-sw.fas",2
 "walker107-b-sw.fas",2
 "walker113-b-sw.fas",2

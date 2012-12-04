@@ -16,15 +16,12 @@ FOO = "GET hostgroups\nColumns: name members_with_state\nOutputFormat: python\n"
 def netcat(hostname, port, content):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((hostname, port))
-    s.sendall(content)
+    s.send(content)
     s.shutdown(socket.SHUT_WR)
-    while 1:
-        data = s.recv(4096)
-        if data == "":
-            break
-        return data
+    data = s.recv(100000000)
     print "Connection closed."
     s.close()
+    return data
 
 data = netcat( s4n.server, s4n.mk_port, FOO ) 
 print data

@@ -549,6 +549,8 @@ landgw1,2
 lmagw1,2
 lmagw2,2
 lmasw1,2
+"loeb-b-sw1",2
+"loeb-cabot-sw1",2
 "long260-1-sw1",2
 "longfellow-2-e-sw1",2
 "longfellow-2-w-sw1",2
@@ -601,6 +603,9 @@ ma1033gw1,2
 "mass1430-6-sw.fas",2
 "mass1637-b-sw.law",2
 "mass1705-b-sw.fas",2
+"mass625-1-sw.fas",2
+"mass625-3-sw.fas",2
+"mass625-bw-sw.fas",2
 "masshall-2-sw1",2
 "masshall-b-sw1",2
 "mather-10-sw1",2
@@ -643,6 +648,7 @@ ma1033gw1,2
 "mdf-lamont-b-sw.fas",2
 "mdf-leverett-fb-sw.fas",2
 "mdf-lise-m1-sw.fas",2
+"mdf-mass625-b-sw.fas",2
 "mdf-mather-bm-sw.fas",2
 "mdf-maxdwork-b-sw.fas",2
 "mdf-mckay-b-sw.fas",2
@@ -792,6 +798,9 @@ mitsw1,2
 "mtaub74-b-sw1.fas",2
 "mtaub78-b-sw1.fas",2
 "mtaub8-mdf-sw1",2
+"mtaub90-1-sw1",2
+"mtaub90-sb-sw1",2
+"mtaub90-sb-sw2",2
 "murr-2-sw1",2
 "murr-3-sw.fas",2
 "nagios-dev.noc.harvard.edu",2
