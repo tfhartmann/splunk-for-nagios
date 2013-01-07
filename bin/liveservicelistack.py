@@ -2,6 +2,7 @@
 import socket
 import sys,splunk.Intersplunk
 import string
+import splunk4nagios as s4n
 
 results = []
 
@@ -14,8 +15,8 @@ try:
             if "src_host" in r:
                 if "name" in r:
                     try:
-		        HOST = 'nagios1'    # The remote nagios server
-		        PORT = 6557              # The remote port on the nagios server
+		        HOST = s4n.server    # The remote nagios server
+		        PORT = s4n.mk_port   # The remote port on the nagios server
 		        content = [ "GET services\nFilter: host_name = ", (r["src_host"]), "\nFilter: service_description = ", (r["name"]), "\nFilter: acknowledged = ", (r["acktype"]), "\nFilter: state != 0\nAnd: 2\nColumns: host_name service_description acknowledged\n" ]
     		        query = "".join(content)
 		        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

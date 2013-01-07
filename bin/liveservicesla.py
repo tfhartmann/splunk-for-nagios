@@ -3,6 +3,8 @@ import socket
 import sys,splunk.Intersplunk
 import string
 from datetime import datetime, timedelta
+import splunk4nagios as s4n
+
 
 results = []
 
@@ -15,8 +17,8 @@ try:
             if "src_host" in r:
                 if "name" in r:
                     try:
-		        HOST = 'nagios1'    # The remote nagios server
-		        PORT = 6557              # The remote port on the nagios server
+		        HOST = s4n.server    # The remote nagios server
+		        PORT = s4n.mk_port   # The remote port on the nagios server
 			N = int(r["daysago"])
 			nowepoch = datetime.now()
 			nowepoch2 = nowepoch.strftime("%s")

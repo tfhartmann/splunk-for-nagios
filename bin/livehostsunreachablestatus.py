@@ -2,7 +2,7 @@
 import socket
 import sys,splunk.Intersplunk
 import string
-import splunk4nagios
+import splunk4nagios as s4n
 
 results = []
 
@@ -14,8 +14,8 @@ try:
         if "_raw" in r:
             if "src_host" in r:
                     try:
-		        HOST = splunk4nagios.server    # The remote nagios server
-		        PORT = 6557              # The remote port on the nagios server
+		        HOST = s4n.server    # The remote nagios server
+		        PORT = s4n.mk_port   # The remote port on the nagios server
 		        content = [ "GET hosts\nStats: hard_state = 2\n" ]
     		        query = "".join(content)
 		        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
