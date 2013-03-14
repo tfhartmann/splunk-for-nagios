@@ -16,7 +16,7 @@
     <param name="actionsMenuFilter">dashboard</param>
   </module>
   <module name="HiddenSearch" layoutPanel="viewHeader">
-    <param name="search">earliest=-24h index=nagios sourcetype=nagios (nagiosevent="CURRENT SERVICE STATE" OR nagiosevent="SERVICE ALERT") name="*" src_host="$nagiosdevice$" | dedup src_host,name | liveservicestate | sort name | table src_host, name, liveservicestate, reason</param>
+    <param name="search">earliest=-24h index=nagios sourcetype=nagios (nagiosevent="CURRENT SERVICE STATE" OR nagiosevent="SERVICE ALERT") name="*" src_host="$nagiosdevice$" | dedup src_host,name | liveservicestate | transaction src_host | table src_host, name, liveservicestate, reason</param>
     <module name="SearchSelectLister">
       <param name="staticFieldsToDisplay">
         <list>
@@ -24,7 +24,7 @@
           <param name="label">All</param>
         </list>
       </param>
-      <param name="search">earliest=-24h index="nagios" nagiosevent="CURRENT HOST STATE" | rex ".+CURRENT HOST STATE\: (?P&lt;device&gt;[^;]*)(?=;)"| stats count by device</param>
+      <param name="search">| inputlookup alldevices.csv | fields device</param>
       <param name="selected">syd1exc04</param>
       <param name="label">Select a Hostname</param>
       <param name="settingToCreate">nagiosdevice_setting</param>
